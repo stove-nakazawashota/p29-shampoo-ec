@@ -191,7 +191,7 @@ body {
     line-height: 1.8;
     color: var(--color-font-base);
     font-family: var(--font-jp);
-    font-family: var(--font-en);
+    /* font-family: var(--font-en); */
 }
 
 /* レイアウト */
@@ -250,6 +250,37 @@ body {
     width: 50px;
 }
 
+.top-kv {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.top-kv-title {
+    font-size: 24px;
+    line-height: 2;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .top-kv-text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    
+    .top-kv-img-wrapper {
+        display: flex;
+    justify-content: flex-end;
+}
+
+    .top-kv-img {
+        width: 1030px;
+    }
+}
+
 /* Feature */
 .feature-about {
     display: flex;
@@ -301,16 +332,40 @@ body {
     }
 }
 
+/* shampoo-img */
+.shampoo-img {
+    margin: 5px calc(50% - 50vw) 15px;
+    width: 100vw;
+}
+
 /* LINE UP */
 .lineup-flex-item {
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
+.lineup-flex-text {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.lineup-flex-name {
+    margin-bottom: 10px;
+}
+
 @media screen and (min-width: 768px) {    
     .lineup-flex-items {
-        display: flex;
+        display: grid;
+        width: 800px;
+        grid-template-columns: auto auto;
+        gap: 20px;
+        margin: 0 auto;
     }
+}
+
+.sozai-img {
+    margin: 5px calc(50% - 50vw) 15px;
+    width: 100vw;
 }
 
 /* instagram */
@@ -318,7 +373,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 140px;
+    width: 120px;
     padding: 48px 0;
     gap: 10px;
 }
@@ -378,4 +433,73 @@ body {
         width: 1080px;
         margin: 0 auto;
     }
+}
+
+/*=============================
+ * Products
+ *===========================*/
+.product-page {
+    margin: 160px 0;
+}
+
+.product-page-inner {
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {    
+    .product-page-inner {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.product-img {
+    width: 50%;
+}
+
+.products-text-wrapper {
+    width: 490px;
+}
+
+.product-text {
+    margin-left: 20px;
+}
+
+.product-title {
+    font-size: 24px;
+    margin-left: 20px; 
+}
+
+/* 関連商品 */
+.related {
+    background-color: var(--color-bg-primary-light);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1980px;
+    padding: 120px;
+}
+
+.related-items {
+    display: flex;
+    text-align: center;
+    margin: 20px;
+    vertical-align: bottom;
+}
+
+.related-item {
+    padding: 0 10px;
+}
+
+.related-about-text {
+    margin-bottom: 10px;
+}
+
+.products-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.margin-adjust {
+    margin: 16px 0;
 }
